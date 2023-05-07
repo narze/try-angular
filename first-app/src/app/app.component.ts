@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { CounterComponent } from './counter/counter.component';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'my-app',
   standalone: true,
-  imports: [HomeComponent, RouterModule],
+  imports: [HomeComponent, CounterComponent, RouterModule],
   template: `
     <main>
       <a [routerLink]="['/']">
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
         </header>
       </a>
       <section class="content">
+        <app-counter></app-counter>
         <router-outlet></router-outlet>
       </section>
     </main>
